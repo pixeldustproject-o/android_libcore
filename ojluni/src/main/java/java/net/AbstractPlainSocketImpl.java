@@ -535,7 +535,6 @@ abstract class AbstractPlainSocketImpl extends SocketImpl
                 // Also, close the CloseGuard when the #close is called.
                 if (!closePending) {
                     closePending = true;
-                    SocketTagger.get().untag(fd);
                     guard.close();
 
                     if (fdUseCount == 0) {
