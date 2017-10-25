@@ -75,7 +75,7 @@ non_openjdk_javadoc_files := \
   luni/src/main/java/java/lang/FindBugsSuppressWarnings.java \
   libart/src/main/java/java/lang/VMClassLoader.java \
   libart/src/main/java/java/lang/invoke/ArrayElementVarHandle.java \
-  libart/src/main/java/java/lang/invoke/ByteArrayVarHandle.java \
+  libart/src/main/java/java/lang/invoke/ByteArrayViewVarHandle.java \
   libart/src/main/java/java/lang/invoke/ByteBufferViewVarHandle.java \
   libart/src/main/java/java/lang/invoke/FieldVarHandle.java \
   luni/src/main/java/java/lang/ref/FinalizerReference.java \
