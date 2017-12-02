@@ -42,6 +42,7 @@ import java.security.AccessController;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import dalvik.annotation.optimization.ReachabilitySensitive;
 import dalvik.system.CloseGuard;
 import sun.net.NetHooks;
 import sun.security.action.GetPropertyAction;
@@ -101,6 +102,7 @@ class UnixAsynchronousSocketChannelImpl
     private Future<?> writeTimer;
 
     // Android-changed: Add CloseGuard support.
+    @ReachabilitySensitive
     private final CloseGuard guard = CloseGuard.get();
 
     UnixAsynchronousSocketChannelImpl(Port port)

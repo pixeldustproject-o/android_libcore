@@ -26,6 +26,7 @@
 
 package java.io;
 
+import dalvik.annotation.optimization.ReachabilitySensitive;
 import java.nio.channels.FileChannel;
 import sun.nio.ch.FileChannelImpl;
 import android.system.ErrnoException;
@@ -66,12 +67,15 @@ import static android.system.OsConstants.*;
 public class RandomAccessFile implements DataOutput, DataInput, Closeable {
 
     // BEGIN Android-added: CloseGuard and some helper fields for Android changes in this file.
+    @ReachabilitySensitive
     private final CloseGuard guard = CloseGuard.get();
     private final byte[] scratch = new byte[8];
     private boolean syncMetadata = false;
     private int mode;
     // END Android-added: CloseGuard and some helper fields for Android changes in this file.
 
+    // Android-added: @ReachabilitySensitive
+    @ReachabilitySensitive
     private FileDescriptor fd;
     private FileChannel channel = null;
     private boolean rw;
