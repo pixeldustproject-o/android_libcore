@@ -1329,7 +1329,6 @@ assertEquals(""+l, (String) MH_this.invokeExact(subl)); // Listie method
          *                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
          * @throws NullPointerException if any argument is null
          * @since 9
-         * @hide
          */
         public VarHandle findVarHandle(Class<?> recv, String name, Class<?> type) throws NoSuchFieldException, IllegalAccessException {
             final Field field = findFieldOfType(recv, name, type);
@@ -1497,7 +1496,6 @@ assertEquals(""+l, (String) MH_this.invokeExact(subl)); // Listie method
          *                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
          * @throws NullPointerException if any argument is null
          * @since 9
-         * @hide
          */
         public VarHandle findStaticVarHandle(Class<?> decl, String name, Class<?> type) throws NoSuchFieldException, IllegalAccessException {
             final Field field = findFieldOfType(decl, name, type);
@@ -1819,7 +1817,6 @@ return mh1;
          * @throws IllegalAccessException if access checking fails
          * @throws NullPointerException if the argument is null
          * @since 9
-         * @hide
          */
         public VarHandle unreflectVarHandle(Field f) throws IllegalAccessException {
             final boolean isStatic = Modifier.isStatic(f.getModifiers());
@@ -2139,7 +2136,6 @@ return mh1;
      * @throws NullPointerException if the arrayClass is null
      * @throws IllegalArgumentException if arrayClass is not an array type
      * @since 9
-     * @hide
      */
     public static
     VarHandle arrayElementVarHandle(Class<?> arrayClass) throws IllegalArgumentException {
@@ -2222,7 +2218,6 @@ return mh1;
      * @throws UnsupportedOperationException if the component type of
      * viewArrayClass is not supported as a variable type
      * @since 9
-     * @hide
      */
     public static
     VarHandle byteArrayViewVarHandle(Class<?> viewArrayClass,
@@ -2311,7 +2306,6 @@ return mh1;
      * @throws UnsupportedOperationException if the component type of
      * viewArrayClass is not supported as a variable type
      * @since 9
-     * @hide
      */
     public static
     VarHandle byteBufferViewVarHandle(Class<?> viewArrayClass,
