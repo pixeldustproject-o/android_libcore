@@ -173,7 +173,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * @since   1.1
      */
     @SuppressWarnings("unchecked")
-    public static final Class<Character> TYPE = (Class<Character>) char[].class.getComponentType();
+    public static final Class<Character> TYPE = (Class<Character>) Class.getPrimitiveClass("char");
 
     /*
      * Normative general types
